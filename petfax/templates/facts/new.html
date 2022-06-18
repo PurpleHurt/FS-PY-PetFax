@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>PetFax | Submit Facts</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
             If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.
         </div>
         <div class="facts-container">
-            <form>
+            <form action="/facts" method="POST">
                 <label for="submitter"><h2>Name</h2></label>
                 <input name="submitter" type="text">
                 <br/>
