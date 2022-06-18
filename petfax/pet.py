@@ -10,7 +10,7 @@ bp = Blueprint('pet', __name__, url_prefix="/pets")
 def index(): 
     return render_template('index.html', pets=pets)
 
-@bp.route('/pets/<int:id>')
+@bp.route('/<int:id>')
 def show(id): 
     pet = pets[id - 1]
     return render_template('show.html', pet=pet)
@@ -21,6 +21,6 @@ def show(id):
     #pets = pets[pet_name - 1]
     #return render_template('show.html')
 
-@bp.route('/new')
+@bp.route('/facts/new')
 def new():
     return render_template('new.html')
